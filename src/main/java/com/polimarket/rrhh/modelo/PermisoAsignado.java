@@ -1,4 +1,4 @@
-package com.polimarket.modelo;
+package com.polimarket.rrhh.modelo;
 
 import jakarta.persistence.*;
 

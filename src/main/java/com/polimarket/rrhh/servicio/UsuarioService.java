@@ -1,7 +1,15 @@
-package com.polimarket.servicio;
+package com.polimarket.rrhh.servicio;
 
-import com.polimarket.modelo.*;
-import com.polimarket.repositorio.*;
+import com.polimarket.rrhh.modelo.*;
+import com.polimarket.rrhh.repositorio.*;
+
+import com.polimarket.rrhh.modelo.Modulo;
+import com.polimarket.rrhh.modelo.PermisoAsignado;
+import com.polimarket.rrhh.modelo.Usuario;
+import com.polimarket.rrhh.repositorio.ModuloRepository;
+import com.polimarket.rrhh.repositorio.PermisoRepository;
+import com.polimarket.rrhh.repositorio.UsuarioRepository;
+
 import jakarta.annotation.PostConstruct;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

@@ -1,7 +1,11 @@
-package com.polimarket.controlador;
+package com.polimarket.rrhh.controlador;
 
-import com.polimarket.modelo.*;
-import com.polimarket.servicio.UsuarioService;
+import com.polimarket.rrhh.modelo.*;
+import com.polimarket.rrhh.modelo.Modulo;
+import com.polimarket.rrhh.modelo.PermisoAsignado;
+import com.polimarket.rrhh.modelo.Usuario;
+import com.polimarket.rrhh.servicio.UsuarioService;
+
 import org.springframework.web.bind.annotation.*;
 import java.util.*;
 

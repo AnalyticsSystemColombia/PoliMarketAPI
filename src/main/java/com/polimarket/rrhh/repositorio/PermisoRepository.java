@@ -1,7 +1,9 @@
-package com.polimarket.repositorio;
+package com.polimarket.rrhh.repositorio;
 
-import com.polimarket.modelo.PermisoAsignado;
 import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.polimarket.rrhh.modelo.PermisoAsignado;
+
 import java.util.List;
 
 public interface PermisoRepository extends JpaRepository<PermisoAsignado, Long> {
