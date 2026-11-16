@@ -19,6 +19,16 @@ public class VentasController {
         this.ventasService = ventasService;
         this.bodegaService = bodegaService;
     }
+    @PutMapping("/clientes")
+    public Map<String, Object> editarCliente(@RequestHeader("usuario") String username, @RequestBody Cliente cliente) {
+        return ventasService.actualizarCliente(username, cliente);
+    }
+
+    @DeleteMapping("/clientes/{documento}")
+    public Map<String, Object> borrarCliente(@RequestHeader("usuario") String username, @PathVariable String documento) {
+        return ventasService.eliminarCliente(username, documento);
+    }
+
 
     @PostMapping("/clientes")
     public Map<String, Object> crearCliente(@RequestHeader("usuario") String username, @RequestBody Cliente cliente) {

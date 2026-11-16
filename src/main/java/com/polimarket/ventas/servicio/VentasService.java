@@ -41,6 +41,22 @@ public class VentasService {
         }
         return Map.of("exito", true, "cliente", clienteRepo.save(cliente));
     }
+    
+    public Map<String, Object> actualizarCliente(String username, Cliente cliente) {
+        if (!usuarioService.validarAcceso(username, "MOD_VENTAS")) {
+            return Map.of("exito", false, "mensaje", "Acceso denegado: sin permiso en MOD_VENTAS");
+        }
+        return Map.of("exito", true, "cliente", clienteRepo.save(cliente));
+    }
+
+    public Map<String, Object> eliminarCliente(String username, String documento) {
+        if (!usuarioService.validarAcceso(username, "MOD_VENTAS")) {
+            return Map.of("exito", false, "mensaje", "Acceso denegado: sin permiso en MOD_VENTAS");
+        }
+        clienteRepo.deleteById(documento);
+        return Map.of("exito", true, "mensaje", "Cliente eliminado correctamente");
+    }
+
 
     // Registrar venta: descuenta stock disponible en tiempo real y deja en PENDIENTE_PROGRAMACION
     @Transactional
